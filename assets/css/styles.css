@@ -33,12 +33,14 @@ Table of Contents
 * 2. RESET VALUES
 * 3. UTILITIES
 * 4. UNIVERSAL STYLES
-* 5.
-* 6.
-* 7.
-* 8.
-* 9.
-* 10.
+* 5. HEADER
+* 6. HERO
+* 7. VERSE
+* 8. WELCOME
+* 9. COMMUNITY
+* 10. MESSAGE
+* 11. FOOTER
+* 12. MEDIA QUERIES
 
 ===========================================
 ======================================== */
@@ -682,7 +684,7 @@ footer p {
     padding-inline: 3%;
 }
 
-/* ====================[11]==================== */
+/* ====================[12]==================== */
 /* ===== MEDIA QUERIES ===== */
 
 @media (max-width: 50em) and (orientation: landscape) {
