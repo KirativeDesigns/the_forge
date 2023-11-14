@@ -79,7 +79,7 @@ Table of Contents
 
 /* ====================[2]==================== */
 /* ===== RESET ===== */
-/* Box sizing rules */
+
 *,
 *::before,
 *::after {
@@ -132,6 +132,10 @@ button {
 
 .flex {
     display: flex;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 /* ====================[4]==================== */
@@ -205,6 +209,7 @@ a {
 
 /* == + @ SVG == */
 a:not([class]),
+.nav-item,
 svg>path {
     transition: color 200ms ease-in-out,
         fill 200ms ease-in-out;
@@ -330,10 +335,6 @@ header.fixed .logo {
     transition: color 200ms ease-in-out;
 }
 
-.mobile-menu-toggle:is(:hover, :focus-visible) {
-    color: var(--primary-brand);
-}
-
 .menu-text {
     text-transform: uppercase;
     margin-right: 5px;
@@ -343,17 +344,21 @@ header.fixed .logo {
     transition: fill 200ms ease-in-out;
 }
 
+.mobile-menu-toggle:is(:hover, :focus-visible) {
+    color: var(--primary-brand);
+}
+
 .mobile-menu-toggle:is(:hover, :focus-visible) .menu-icon {
     fill: var(--primary-brand);
 }
 
 .menu-line {
-    transition: y 300ms ease-in 300ms, transform 300ms ease-in, opacity 0ms 300ms;
+    transition: y 150ms ease-in 150ms, transform 150ms ease-in, opacity 0ms 150ms;
     transform-origin: center;
 }
 
 .mobile-menu-toggle[aria-expanded="true"] .menu-line {
-    transition: y 300ms ease-in, transform 300ms ease-in 300ms, opacity 0ms 300ms;
+    transition: y 150ms ease-in, transform 150ms ease-in 150ms, opacity 0ms 150ms;
 }
 
 .mobile-menu-toggle[aria-expanded="true"] :is(.top-bar, .bottom-bar) {
@@ -424,8 +429,12 @@ header.fixed .logo {
     flex-direction: column;
 }
 
-.sub-menu a {
+.sub-menu .nav-item {
     font-size: clamp(0.95rem, 3vw, 1.15rem);
+}
+
+.nav-item:is(:hover, :focus-visible):not(.button.nav-item) {
+    color: var(--primary-brand);
 }
 
 @media (min-width: 48em) {
