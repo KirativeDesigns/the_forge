@@ -153,7 +153,7 @@ body {
 
 section:not(.hero),
 .verse-wrapper {
-    margin-block: clamp(var(--gutter-800), 100% / 3, 16rem);
+    margin-block: clamp(var(--gutter-800), 100% / 3, 11rem);
 }
 
 .sr-only {
